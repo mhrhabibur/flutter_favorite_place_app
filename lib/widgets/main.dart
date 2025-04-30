@@ -1,6 +1,9 @@
-import 'package:favorite_places_app/screens/add_place.dart';
-import 'package:favorite_places_app/screens/places.dart';
 import 'package:flutter/material.dart';
+import 'package:riverpod/riverpod.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import 'package:favorite_places_app/screens/places.dart';
+import 'package:favorite_places_app/screens/add_place.dart';
 
 final colorScheme = ColorScheme.fromSeed(
   brightness: Brightness.dark,
@@ -14,7 +17,7 @@ final theme = ThemeData.from(
 );
 
 void main() {
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
