@@ -8,6 +8,13 @@ class PlacesList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    if (places.isEmpty) {
+      return Center(child: Text("No places added yet."));
+    }
+    return ListView.builder(
+      itemCount: places.length,
+      itemBuilder:
+          (context, index) => ListTile(title: Text(places[index].title)),
+    );
   }
 }

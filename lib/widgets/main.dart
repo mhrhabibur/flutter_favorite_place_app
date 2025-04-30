@@ -1,4 +1,5 @@
 import 'package:favorite_places_app/screens/add_place.dart';
+import 'package:favorite_places_app/screens/places.dart';
 import 'package:flutter/material.dart';
 
 final colorScheme = ColorScheme.fromSeed(
@@ -21,37 +22,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: HomePage());
-  }
-}
-
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
-
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Your Places"),
-        backgroundColor: Colors.blue[100],
-        actions: [
-          IconButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (_) => AddPlace()),
-              );
-            },
-            icon: Icon(Icons.add),
-          ),
-        ],
-      ),
-      body: Center(child: Text("No Favorite Places added yet.")),
-    );
+    return MaterialApp(debugShowCheckedModeBanner: false, home: PlacesScreen());
   }
 }
