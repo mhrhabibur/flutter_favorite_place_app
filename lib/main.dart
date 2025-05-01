@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:riverpod/riverpod.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
 import 'package:favorite_places_app/screens/places.dart';
-import 'package:favorite_places_app/screens/add_place.dart';
 
 final colorScheme = ColorScheme.fromSeed(
   brightness: Brightness.dark,
